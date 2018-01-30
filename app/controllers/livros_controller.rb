@@ -1,5 +1,7 @@
 class LivrosController < ApplicationController
 
+  before_action :set_livro, only: [:edit, :update, :destroy]
+
   def index
     @ultimos_livros_inseridos = Livro.all.order(created_at: :desc )
   end
@@ -22,10 +24,30 @@ class LivrosController < ApplicationController
   def create
     @livro = Livro.new livro_params
     if @livro.save
-      flash[:notice] = "Livro salvo com sucesso"
+      flash[:notice] = "Livro \"#{@livro.nome}\" salvo com sucesso!"
       redirect_to root_url
     else
       renderiza :new
+    end
+  end
+
+  def edit
+    renderiza :edit
+  end
+
+  def update
+    if @livro.update livro_params
+      flash[:notice] = "Livro \"#{@livro.nome}\" atualizado com sucesso!"
+      redirect_to root_url
+    else
+      renderiza :new
+    end
+  end
+
+  def destroy
+    if @livro.destroy
+      flash[:notice] = "Livro \"#{@livro.nome}\" deletado!"
+      redirect_to root_url
     end
   end
 
@@ -37,5 +59,10 @@ class LivrosController < ApplicationController
 
   def renderiza(view)
     render view
+  end
+
+  def set_livro
+    id = params[:id]
+    @livro = Livro.find(id)
   end
 end
