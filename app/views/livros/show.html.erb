@@ -1,0 +1,11 @@
+<h2><%= @livro.nome %></h2>
+<h6>
+  by <%= @livro.autor %> (<%= @livro.editora %>)
+</h6>
+<small><%= @livro.nota %></small>
+<p>"<%= @livro.descricao %>"</p>
+
+  <div class="btn-group">
+    <%= link_to "Editar Livro >", edit_livro_path %>
+    <%= button_to "Excluir Livro", @livro, class: "btn btn-danger btn-sm btn-group btn-right" %>
+</div>
