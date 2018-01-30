@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.col{
+  width: 100px;
+  padding:1em;
+  display:table-cell;
+}

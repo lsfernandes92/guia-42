@@ -1,0 +1,14 @@
+
+<% if  flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <div class="row">
+    <%= render @ultimos_livros_inseridos %>
+  </div>
+</div>
+
+<%= link_to "+ Adicionar Livro", new_livro_path %>

@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :livros, only: [:new, :create, :edit, :update, :destroy]
+  get "livros/busca" => "livros#busca", as: :busca_livro
+  root "livros#index"
 end
