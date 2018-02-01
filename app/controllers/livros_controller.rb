@@ -1,5 +1,6 @@
 class LivrosController < ApplicationController
 
+  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
   before_action :set_livro, only: [:edit, :update, :destroy]
 
   def index
@@ -54,7 +55,7 @@ class LivrosController < ApplicationController
   private
 
   def livro_params
-    params.require(:livro).permit(:nome, :autor, :editora, :nota, :descricao)
+    params.require(:livro).permit(:nome, :autor, :editora, :nota, :descricao, :image)
   end
 
   def renderiza(view)

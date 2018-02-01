@@ -29,7 +29,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# To put some style into html
 gem 'twitter-bootstrap-rails'
+# Gem's to upload images
+# @CarrierWave: Helper to upload image
+# @Mini_Magick: Helps with the resizing of images 
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

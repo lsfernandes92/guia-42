@@ -6,6 +6,7 @@ class CreateLivros < ActiveRecord::Migration[5.1]
       t.string :editora
       t.integer :nota
       t.text :descricao
+      t.string :image
 
       t.timestamps
     end
