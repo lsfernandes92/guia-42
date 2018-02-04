@@ -33,9 +33,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails'
 # Gem's to upload images
 # @CarrierWave: Helper to upload image
-# @Mini_Magick: Helps with the resizing of images 
+# @Mini_Magick: Helps with the resizing of images
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
+# Minimal syntax template for HTML
+gem 'slim'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

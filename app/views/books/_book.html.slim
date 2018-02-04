@@ -1,0 +1,9 @@
+.col
+  = image_tag book.image.thumb, class: "float-left"
+  h4
+    = link_to book.name, book
+  h6
+    = book.author
+  small
+    | Nota: 
+    = book.stars

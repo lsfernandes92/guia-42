@@ -1,0 +1,21 @@
+= image_tag @book.image.thumb
+h2
+  = @book.name
+h6
+  |  by
+  = @book.author
+  |  (
+  = @book.publisher
+  | )
+small
+  = @book.stars
+p
+  | "
+  = @book.about
+  | "
+.btn-group
+  = link_to "Editar Livro >", edit_book_path
+  = button_to "Excluir Livro", @book,
+                                 method: :delete,
+                                 class: "btn btn-danger btn-sm btn-group btn-right",
+                                 data: { confirm: "Quer realmente apagar o livro \"#{@book.name}\" ?" }

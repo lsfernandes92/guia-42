@@ -1,0 +1,9 @@
+- if  flash[:notice]
+  .alert.alert-success
+    = flash[:notice]
+.form-group
+  h5
+    | Últimos livros adicionados
+  .row
+    = render @lastest_add_books
+= link_to "+ Adicionar Livro", new_book_path

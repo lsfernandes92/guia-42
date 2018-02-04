@@ -1,0 +1,24 @@
+- @book.errors.full_messages.each do |messages|
+  .alert.alert-danger
+    = messages
+= form_for @book do |b|
+  .form-group
+    = b.label :name
+    = b.text_field :name, class: "form-control"
+  .form-group
+    = b.label :author
+    = b.text_field :author, class: "form-control"
+  .form-group
+    = b.label :publisher
+    = b.text_field :publisher, class: "form-control"
+  .form-group
+    = b.label :stars
+    = b.number_field :stars, step: 1, class: "form-control"
+  .form-group
+    = b.label :about
+    = b.text_area :about, rows: 4, class: "form-control"
+  .form-group
+    = b.label :image
+    = b.file_field :image, class: "form-control"
+  div[style="margin-top: 0.2cm;"]
+    = b.submit action_text, class: "btn btn-primary form-control"

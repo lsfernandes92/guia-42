@@ -10,11 +10,11 @@
 
   <body>
     <%= nav_bar brand: "Guia 42", brand_link: root_url do %>
-      <%= form_tag busca_livro_path,
+      <%= form_tag search_book_path,
                     method: :get,
                     class: "navbar-form navbar-right" do %>
         <div class="form-group">
-          <%= text_field_tag :nome, @nome_a_buscar, class: "form-control" %>
+          <%= text_field_tag :name, @search_name, class: "form-control" %>
           <%= button_to "Buscar", nil, class: "btn btn-primary"%>
         </div>
       <% end %>
