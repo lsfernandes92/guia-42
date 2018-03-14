@@ -23,4 +23,24 @@ ActiveRecord::Schema.define(version: 20180204011414) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "livros", force: :cascade do |t|
+    t.string "nome"
+    t.string "autor"
+    t.string "editora"
+    t.integer "nota"
+    t.text "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
+  create_table "nomes", force: :cascade do |t|
+    t.string "autor"
+    t.string "editora"
+    t.integer "nota"
+    t.text "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

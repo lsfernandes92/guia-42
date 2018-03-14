@@ -23377,3 +23377,110 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.19.0.1 at 2018-03-14 04:24:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.slim within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  Rendered collection of books/_book.html.slim [1 times] (5.8ms)
+  Rendered books/index.html.slim within layouts/application (37.0ms)
+Completed 200 OK in 581ms (Views: 562.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1" for 172.19.0.1 at 2018-03-14 04:25:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.slim within layouts/application
+  Rendered books/show.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 172.19.0.1 at 2018-03-14 04:25:06 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.slim within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  Rendered collection of books/_book.html.slim [1 times] (6.0ms)
+  Rendered books/index.html.slim within layouts/application (18.9ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 172.19.0.1 at 2018-03-14 04:25:09 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#new as HTML
+  Rendering books/new.html.slim within layouts/application
+  Rendered books/_form.html.slim (26.5ms)
+  Rendered books/new.html.slim within layouts/application (30.9ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 172.19.0.1 at 2018-03-14 04:25:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z08IKNmtsl8smA95BklhnPcl6uDpsdm4PWo73VM8gBJCiZTtI8ATImC1La0q/CK6r7CA102+YBDKe0A9o6DkHg==", "book"=>{"name"=>"tse", "author"=>"tes", "publisher"=>"tes", "stars"=>"3", "about"=>"testeststs"}, "commit"=>"Adicionar Livro"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "books" WHERE "books"."name" = ? AND "books"."author" = ? AND "books"."publisher" = ? LIMIT ?[0m  [["name", "tse"], ["author", "tes"], ["publisher", "tes"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "publisher", "stars", "about", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "tse"], ["author", "tes"], ["publisher", "tes"], ["stars", 3], ["about", "testeststs"], ["created_at", "2018-03-14 04:25:16.432027"], ["updated_at", "2018-03-14 04:25:16.432027"]]
+  [1m[35m (238.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 255ms (ActiveRecord: 239.8ms)
+
+
+Started GET "/" for 172.19.0.1 at 2018-03-14 04:25:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.slim within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  Rendered collection of books/_book.html.slim [2 times] (17.9ms)
+  Rendered books/index.html.slim within layouts/application (25.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/5" for 172.19.0.1 at 2018-03-14 04:25:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.slim within layouts/application
+  Rendered books/show.html.slim within layouts/application (7.1ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/books/5" for 172.19.0.1 at 2018-03-14 04:25:21 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ycwuVPkTNgBB0rtKkeNKf7DXswmktK/q4TmQEJrvWAMxz4Lw+5ErOz/WYJj1ScqzxEhwVECTAYoULLYcRPjAFw==", "id"=>"5"}
+Filter chain halted as #<Proc:0x00000000044de1e0@/usr/local/bundle/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.19.0.1 at 2018-03-14 04:25:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.slim within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  Rendered collection of books/_book.html.slim [2 times] (5.8ms)
+  Rendered books/index.html.slim within layouts/application (13.9ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/search?utf8=%E2%9C%93&name=mochileiro&authenticity_token=TCJD3pfrc9SL7NcbV%2FQKv%2Bckkk9NbIi65ayl4bR94XqQ7q9iji%2FKfPRLDM7ye5mWy9OWd2p9z%2Bz%2F75UdjFTp%2FQ%3D%3D" for 172.19.0.1 at 2018-03-14 04:25:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"mochileiro", "authenticity_token"=>"TCJD3pfrc9SL7NcbV/QKv+ckkk9NbIi65ayl4bR94XqQ7q9iji/KfPRLDM7ye5mWy9OWd2p9z+z/75UdjFTp/Q==", "id"=>"search"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=search):
+  
+app/controllers/books_controller.rb:66:in `set_book'
